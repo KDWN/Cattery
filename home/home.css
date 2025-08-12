@@ -17,6 +17,14 @@ nav {
     margin: 10px;
 }
 
+.hamIcon {
+    margin: auto;
+}
+
+.hamIcon:hover {
+    cursor: pointer;
+}
+
 .navContent {
     position: relative;
     display: flex;
