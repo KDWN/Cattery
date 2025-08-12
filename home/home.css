@@ -3,42 +3,65 @@ body {
     background-color: rgb(184, 222, 220);
 }
 
-img {
+#banner {
     margin: 0;
 }
 
 nav {
-    position: sticky;
+    position: fixed;
     display: flex;
-    justify-content: space-between;
-    background-color: rgb(255, 254, 255);
+    flex-direction: column;
+    float: inline-end;
     font-family: 'Poppins', sans-serif;
     top: 0;
-    border: 2px solid rgb(51, 50, 50);
-    border-width: 2px;
-    margin: 0;
-    transition: transform 0.5s;
+    margin: 10px;
 }
 
-nav.hide {
-    transform: translateY(-60px);
-}
-
-#navList {
-    margin:1rem auto 1rem auto;
-    list-style: none;
+.navContent {
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
-.navText{
+nav:hover .navContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.link0{
+    transition: transform 0.5s ease-in-out 0s;
+}
+
+.link1{
+    transition: transform 0.5s ease-in-out 0.2s;
+}
+
+.link2{
+    transition: transform 0.5s ease-in-out 0.4s;
+}
+
+.link3{
+    transition: transform 0.5s ease-in-out 0.6s;
+}
+
+.navText {
     font-weight: bold;
     font-family: 'Poppins', serif;
     font-size: 1.5rem;
     border-radius: 80px;
+    background-color: rgb(255, 255, 255);
+    border : 1px rgb(0, 0, 0) solid;
     color: black;
     text-decoration: none;
     padding: 6px;
+    margin-top: 5px;
+    transform: translate(-125px);
+}
+
+nav:hover .navText {
+    transform: translate(0px);
 }
 
 .navText:hover {
@@ -48,7 +71,7 @@ nav.hide {
 }
 
 .navText#active {
-    background-color: rgb(184, 222, 220);
+    background-color: rgb(255, 255, 255);
     border : 1px rgb(0, 0, 0) solid;
     color : black;
 }
