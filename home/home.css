@@ -17,8 +17,14 @@ nav {
     margin: 10px;
 }
 
+#hamBtn {
+    display: flex;
+    flex-direction: column;
+}
+
 .hamIcon {
-    margin: auto;
+    margin: 2px auto 2px auto;
+    transition: transform 0.5s ease-in-out;
 }
 
 .hamIcon:hover {
@@ -33,7 +39,7 @@ nav {
     margin-top: 10px;
 }
 
-nav:hover .navContent {
+nav.open .navContent {
     display: flex;
     flex-direction: column;
 }
@@ -68,7 +74,7 @@ nav:hover .navContent {
     transform: translate(-125px);
 }
 
-nav:hover .navText {
+nav.open .navText {
     transform: translate(0px);
 }
 
