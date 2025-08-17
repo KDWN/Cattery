@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color: rgb(184, 222, 220);
+    background-image: url(./images/catPattern.png);
+    background-size: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#banner {
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    margin: 10px;
+}
+
+#hamBtn {
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+#hamBtn:hover {
+    cursor: pointer;
+}
+
+.hamIcon {
+    margin: 2px auto 2px auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.navContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+nav.open .navContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.link0{
+    transition: transform 0.5s ease-in-out 0s;
+}
+
+.link1{
+    transition: transform 0.5s ease-in-out 0.2s;
+}
+
+.link2{
+    transition: transform 0.5s ease-in-out 0.4s;
+}
+
+.link3{
+    transition: transform 0.5s ease-in-out 0.6s;
+}
+
+.navText {
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 80px;
+    background-color: rgb(255, 255, 255);
+    border : 1px rgb(0, 0, 0) solid;
+    color: black;
+    text-decoration: none;
+    padding: 6px;
+    margin-top: 5px;
+    transform: translate(-125px);
+}
+
+nav.open .navText {
+    transform: translate(0px);
+}
+
+.navText:hover {
+    font-weight: bold;
+    background-color: coral;
+    color: black;
+}
+
+.navText#active {
+    background-color: rgb(255, 255, 255);
+    border : 1px rgb(0, 0, 0) solid;
+    color : black;
+}
+.navText#active:hover {
+    background-color: coral;
+    color: black;
+}

@@ -1,95 +1,31 @@
-body {
-    margin: 0;
-    background-color: rgb(184, 222, 220);
-}
-
-#banner {
-    margin: 0;
-}
-
-nav {
-    position: fixed;
+#aboutBox {
+    background-image:url(../images/filler-Img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: content-box;
+    width: fit-content;
     display: flex;
-    flex-direction: column;
-    float: inline-end;
-    font-family: 'Poppins', sans-serif;
-    top: 0;
-    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 7.5rem auto auto auto;
 }
 
-#hamBtn {
+#aboutBox header {
+    font-size: 2rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-.hamIcon {
-    margin: 2px auto 2px auto;
-    transition: transform 0.5s ease-in-out;
+#aboutBox div {
+    width: 80%;
 }
 
-.hamIcon:hover {
-    cursor: pointer;
+#services {
+    margin-top: 5%;
 }
 
-.navContent {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-nav.open .navContent {
-    display: flex;
-    flex-direction: column;
-}
-
-.link0{
-    transition: transform 0.5s ease-in-out 0s;
-}
-
-.link1{
-    transition: transform 0.5s ease-in-out 0.2s;
-}
-
-.link2{
-    transition: transform 0.5s ease-in-out 0.4s;
-}
-
-.link3{
-    transition: transform 0.5s ease-in-out 0.6s;
-}
-
-.navText {
-    font-weight: bold;
-    font-family: 'Poppins', serif;
-    font-size: 1.5rem;
-    border-radius: 80px;
-    background-color: rgb(255, 255, 255);
-    border : 1px rgb(0, 0, 0) solid;
-    color: black;
-    text-decoration: none;
-    padding: 6px;
-    margin-top: 5px;
-    transform: translate(-125px);
-}
-
-nav.open .navText {
-    transform: translate(0px);
-}
-
-.navText:hover {
-    font-weight: bold;
-    background-color: coral;
-    color: black;
-}
-
-.navText#active {
-    background-color: rgb(255, 255, 255);
-    border : 1px rgb(0, 0, 0) solid;
-    color : black;
-}
-.navText#active:hover {
-    background-color: coral;
-    color: black;
+#services img {
+    width: 50%;
 }
