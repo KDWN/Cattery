@@ -1,10 +1,16 @@
+
+
+#banner {
+    margin: 0;
+}
+
 #aboutBox {
+    width: 90%;
     background-image:url(../images/filler-Img.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     box-sizing: content-box;
-    width: fit-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,19 +19,45 @@
 
 #aboutBox header {
     font-size: 2rem;
-    width: 100%;
+    width: 30%;
     display: flex;
     justify-content: center;
+    margin: auto 60% auto 10%;
 }
 
 #aboutBox div {
-    width: 80%;
+    width: 30%;
+    margin: auto auto auto 10%;
+}
+
+#aboutBox p {
+    font-size: 1.5rem;
 }
 
 #services {
     margin-top: 5%;
+    display: inline-block;
+    justify-content: space-evenly;
+    height: 500px;
 }
 
-#services img {
-    width: 50%;
+.service {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10vh 0px 10vh 0px;
+}
+
+.rightshift {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.service img {
+    width: 40%;
+    box-sizing: content-box;
+}
+
+.service p {
+    width: 40%;
 }

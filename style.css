@@ -6,10 +6,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#banner {
-    margin: 0;
-}
-
 nav {
     position: fixed;
     display: flex;
