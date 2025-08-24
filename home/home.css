@@ -34,11 +34,32 @@
     font-size: 1.5rem;
 }
 
-#services {
+#serviceBox {
     margin-top: 5%;
-    display: inline-block;
-    justify-content: space-evenly;
-    height: 500px;
+    display: flex;
+}
+
+#serviceBox img {
+    width: 45%;
+    box-sizing: content-box;
+    margin: auto;
+}
+
+#subServBox {
+    width: 45%;
+    margin: auto;
+}
+
+#subServBox h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#services {
+    margin: auto;
+    overflow-y: scroll;
+    height: 400px;
+    width: 100%;
 }
 
 .service {
@@ -53,11 +74,7 @@
     flex-direction: row-reverse;
 }
 
-.service img {
-    width: 40%;
-    box-sizing: content-box;
-}
-
 .service p {
-    width: 40%;
+    width: 100%;
+    font-size: 1.5rem;
 }
