@@ -1,4 +1,8 @@
-
+section h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+}
 
 #banner {
     margin: 0;
@@ -18,10 +22,7 @@
 }
 
 #aboutBox header {
-    font-size: 2rem;
     width: 30%;
-    display: flex;
-    justify-content: center;
     margin: auto 60% auto 10%;
 }
 
@@ -55,9 +56,45 @@
 
 .service img {
     width: 40%;
-    box-sizing: content-box;
 }
 
 .service p {
     width: 40%;
+}
+
+#contactBorder {
+    margin: 2rem 0px 2rem 0px;
+}
+
+#contactBox {
+    margin: 2rem auto 2rem auto;
+    width: 50%;
+    background-color: rgb(255, 252, 248);
+    border: 2px solid rgb(183, 181, 177);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1rem 0px 1rem 0px;
+}
+
+.contacts {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+.contacts h3{
+    margin: 0px 0px 0px 2%;
+    font-size: 0.9rem;
+    font-weight:normal;    
+}
+
+.contactInfo {
+    background-color: rgb(255, 252, 248);
+    text-align: center;
+    padding: 0.2rem;
+    border: 2px solid rgb(183, 181, 177);
+    border-radius: 10px;
 }

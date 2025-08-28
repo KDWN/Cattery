@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    background-color: rgb(184, 222, 220);
     background-image: url(./images/catPattern.png);
     background-size: 200px;
     font-family: Arial, Helvetica, sans-serif;
@@ -12,6 +11,11 @@ nav {
     flex-direction: column;
     top: 0;
     margin: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 #hamBtn {
@@ -62,7 +66,7 @@ nav.open .navContent {
     font-weight: bold;
     font-size: 1.5rem;
     border-radius: 80px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 252, 248);
     border : 1px rgb(0, 0, 0) solid;
     color: black;
     text-decoration: none;
@@ -76,17 +80,32 @@ nav.open .navText {
 }
 
 .navText:hover {
-    font-weight: bold;
-    background-color: coral;
+    background-color: rgb(255, 230, 221);
     color: black;
 }
 
 .navText#active {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(219, 231, 231);
     border : 1px rgb(0, 0, 0) solid;
     color : black;
 }
 .navText#active:hover {
-    background-color: coral;
+    background-color: rgb(255, 230, 221);
     color: black;
+}
+
+footer {
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(255, 252, 248);
+    border-top: 2px solid rgb(183, 181, 177);
+}
+
+#links {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
 }

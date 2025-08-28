@@ -1,0 +1,48 @@
+header {
+    text-align: center;
+}
+
+.terms {
+    width: 70%;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    background-color: rgb(255, 252, 248);
+    border: 2px solid rgb(183, 181, 177);
+    border-radius: 5px;
+    margin: 1rem auto 1rem auto;
+}
+
+.hide {
+    display: none;
+}
+
+.terms div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapse {
+    padding: 0.5rem;
+}
+
+.collapse:hover {
+    cursor: pointer;
+}
+
+.terms div img {
+    width: 16px;
+    height: 4px;
+    margin: auto 0px auto 0px;
+}
+
+.dash0 {
+    position: relative;
+    transform: translateX(16px) rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 3rem;
+}
