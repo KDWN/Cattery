@@ -1,3 +1,7 @@
+:root {
+    --altBack: rgb(197, 235, 235);
+}
+
 section h1 {
     font-size: 2rem;
     text-align: center;
@@ -5,41 +9,78 @@ section h1 {
 }
 
 #banner {
+    width: auto;
+    height: 100vh;
+    background-image: url("../images/sneakyCatCut.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
+    overflow-x: hidden;
+}
+
+#banner img {
+    width: 30%;
+    margin: auto auto auto 70%;
+}
+
+#topInfo {
+    background-image: linear-gradient(rgb(226,224,216), var(--altBack));
+    padding: 7.5rem 0 7.5rem 0;
 }
 
 #aboutBox {
-    width: 90%;
-    background-image:url(../images/filler-Img.png);
+    width: 60%;
+    height: 75vh;
+    background-image:url(../images/catPaddockCut2.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: content-box;
+    background-position: bottom;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 7.5rem auto auto auto;
+    justify-content: space-evenly;
+    flex-direction: row;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
 }
 
 #aboutBox header {
-    width: 30%;
-    margin: auto 60% auto 10%;
+    width: 30rem;
+    margin: 7vh 0 0 10vw;
+    transform: translateX(15vw);
+}
+
+#aboutBox h1 {
+    font-size: 5rem;
 }
 
 #aboutBox div {
-    width: 30%;
-    margin: auto auto auto 10%;
+    width: 50%;
+    margin: 20vh 5vw 0 0;
 }
 
 #aboutBox p {
-    font-size: 1.5rem;
+    text-align: end;
+    font-size: 1.48rem;
 }
 
 #services {
-    margin-top: 5%;
     display: inline-block;
     justify-content: space-evenly;
     height: 500px;
+}
+
+#services header {
+    width: 100%;
+    background-image: linear-gradient(var(--altBack), var(--altBack), var(--altBack), var(--altBack), white);
+    height: 20vh;
+    align-content: center;
+    margin-bottom: -9vh;
+    color:rgb(34, 78, 78);
+}
+
+#services header h1 {
+    font-size: 4rem;
 }
 
 .service {
@@ -56,10 +97,15 @@ section h1 {
 
 .service img {
     width: 40%;
+    border-radius: 5px;
 }
 
 .service p {
     width: 40%;
+    font-size: 2rem;
+    font-weight: 100;
+    color: rgb(30, 30, 30);
+    margin: auto 0 auto 0;
 }
 
 #contactBorder {

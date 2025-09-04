@@ -1,8 +1,12 @@
+@import url("https://use.typekit.net/tep2lad.css");
+
 body {
     margin: 0;
     background-image: url(./images/catPattern.png);
     background-size: 200px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "dynapuff", sans-serif;
+    font-weight: 100;
+    overflow-x: hidden;
 }
 
 nav {
@@ -31,6 +35,9 @@ img {
 .hamIcon {
     margin: 2px auto 2px auto;
     transition: transform 0.5s ease-in-out;
+    width: 10vw;
+    max-width: 100px;
+    min-width: 50px;
 }
 
 .navContent {
@@ -95,11 +102,17 @@ nav.open .navText {
 }
 
 footer {
-    height: 5rem;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
     background-color: rgb(255, 252, 248);
     border-top: 2px solid rgb(183, 181, 177);
+}
+
+footer img {
+    --footerLogo:10rem;
+    width: var(--footerLogo);
+    height: var(--footerLogo);
+    margin: 0;
 }
 
 #links {
@@ -108,4 +121,5 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: auto;
+    font-size: 1.3rem;
 }

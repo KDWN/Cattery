@@ -1,0 +1,91 @@
+#bookingBox {
+    display: flex;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    background-color: rgb(255, 252, 248);
+    padding-right: 3%;
+    border: 2px solid rgb(183, 181, 177);
+    border-right: none;
+    margin: 1rem 0 1rem 7%;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0 auto 0 auto;
+}
+
+header img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 0.5rem auto;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 252, 248);
+    border: 2px solid rgb(183, 181, 177);
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    padding-left: 0%;
+    padding-right: 0.5rem;
+    margin: 1rem 2rem 1rem 0;
+}
+
+form section {
+    margin: 1rem auto 0 auto;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0 0 0;
+    font-size: 0.75rem;
+}
+
+input {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+    border-radius: 3px;
+    width: 100%;
+    border: 2px solid rgb(147, 147, 147);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+#catInfo {
+    width: 50%;
+    margin-top: 3rem;
+}
+
+#duration {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 85%;
+}
+
+#duration input {
+    font-size: 1rem;
+    margin: 0;
+}
+
+textarea {
+    margin: 2rem auto 1rem auto;
+    resize: none;
+}

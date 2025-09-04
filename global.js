@@ -11,8 +11,8 @@ function hamClick(menu) {
     }
     else {
         icon1.style.transform = 'translate(-120px) scale(0.9)';
-        icon0.style.transform = 'translate(0, 18px) rotate(45deg) scale(0.8)';
-        icon2.style.transform = 'translate(0, -18px) rotate(-45deg) scale(0.8)';
+        icon0.style.transform = 'translate(0, 127.5%) rotate(45deg) scale(0.8)';
+        icon2.style.transform = 'translate(0, -127.5%) rotate(-45deg) scale(0.8)';
         nav.classList.add("open");
     }
 }

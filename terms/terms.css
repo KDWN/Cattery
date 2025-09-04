@@ -11,6 +11,16 @@ header {
     margin: 1rem auto 1rem auto;
 }
 
+ul {
+    list-style: none;
+    margin-left: -2rem;
+}
+
+.line {
+    margin: 0 0 0.45rem 0;
+    line-height: 120%;
+}
+
 .hide {
     display: none;
 }
@@ -40,9 +50,7 @@ header {
     transition: transform 0.5s ease-in-out;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-top: 3rem;
+strong {
+    font-weight: bolder;
+    font-size: 1.3rem;
 }
