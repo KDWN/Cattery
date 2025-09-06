@@ -1,122 +1,12 @@
-* {
-    box-sizing: border-box;
-}
-
-#container {
-    position: relative;
-    width: 80%;
-    margin: 0 auto 0 auto;
-}
-
-.blur {
+#gallery {
+    display: block;
+    overflow-x: scroll;
     display: flex;
-    width: 100%;
-    backdrop-filter: blur(20px);
-    justify-content: center;
+    background-color: rgb(23, 35, 35);
 }
 
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    max-height: 80vh;
-}
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-#slide1 {
-    background-image: url(../images/barn.jpeg);
-    backdrop-filter: blur(1rem);
-}
-
-#slide2 {
-    background-image: url(../images/cat.jpeg);
-    backdrop-filter: blur(1rem);
-}
-
-#slide3 {
-    background-image: url(../images/scaredyCat.jpeg);
-    backdrop-filter: blur(1.5rem);
-}
-
-#slide4 {
-    background-image: url(../images/catTower.jpeg);
-    backdrop-filter: blur(1rem);
-}
-
-#slide5 {
-    background-image: url(../images/catCuddle.jpg);
-    backdrop-filter: blur(1rem);
-}
-
-.cursor {
-    cursor: pointer;
-}
-
-#prev,
-#next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
+#gallery img {
+    height: 80vh;
     width: auto;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-#next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-#prev:hover,
-#next:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-}
-
-.demo {
-    opacity: 0.6;
-    height: 200px;
-    width: auto;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
+    margin: 0.5rem 1rem 0.5rem 1rem;
 }
