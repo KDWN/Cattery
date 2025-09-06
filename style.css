@@ -5,8 +5,12 @@ body {
     background-image: url(./images/catPattern.png);
     background-size: 200px;
     font-family: "dynapuff", sans-serif;
-    font-weight: 100;
     overflow-x: hidden;
+}
+
+p {
+    font-family:"Comic Relief", system-ui;
+    font-weight: 400;
 }
 
 nav {
@@ -35,9 +39,10 @@ img {
 .hamIcon {
     margin: 2px auto 2px auto;
     transition: transform 0.5s ease-in-out;
-    width: 10vw;
+    width: 5vw;
+    height: 12px;
     max-width: 100px;
-    min-width: 50px;
+    min-width: 20px;
 }
 
 .navContent {

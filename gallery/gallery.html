@@ -10,9 +10,13 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./gallery.css">
         <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="../style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Delius&display=swap" rel="stylesheet">
         <script type="module" src="../global.js"></script>
+        <script type="module" src="./gallery.js"></script>
     </head>
     <body>
         <nav id = "topNav">
@@ -28,7 +32,74 @@
                 <a href = "../terms/terms.html" class = "navText link3">T's & C's</a>
             </section>
         </nav>
-        
+        <section id = "container">
+            <div id = "slideshow">
+                <div id = "slide1" class="mySlides">
+                    <div class = "blur">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="../images/barn.jpeg" alt="the cattery / barn">
+                    </div>
+                </div>
+                <div id = "slide2"class="mySlides">
+                    <div class = "blur">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="../images/cat.jpeg" alt="cat relaxing">
+                    </div>
+                </div>
+                <div id = "slide3"class="mySlides">
+                    <div class = "blur">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="../images/scaredyCat.jpeg" alt="suprised cat">
+                    </div>
+                </div>
+                <div id = "slide4"class="mySlides">
+                    <div class = "blur">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="../images/catTower.jpeg" alt="cat with food">
+                    </div>
+                </div>
+                <div id = "slide5"class="mySlides">
+                    <div class = "blur">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="../images/catCuddle.jpg" alt="cats cuddling">
+                    </div>
+                </div>
+                <div id = "slide6" class="mySlides">
+                    <div class = "blur">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="../images/logo.jpeg" alt="K street cats">
+                    </div>
+                </div>
+            </div>
+
+            <a id="prev">&#10094;</a>
+            <a id="next">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+            
+            <div class="row">
+                <div class="column">
+                    <img id="img1" class="demo cursor" src="../images/barn.jpeg" alt="the cattery / barn">
+                </div>
+                <div class="column">
+                    <img id="img2" class="demo cursor" src="../images/cat.jpeg" alt="cat relaxing">
+                </div>
+                <div class="column">
+                    <img id="img3" class="demo cursor" src="../images/scaredyCat.jpeg" alt="suprised cat">
+                </div>
+                <div class="column">
+                    <img id="img4" class="demo cursor" src="../images/catTower.jpeg" alt="cat with food">
+                </div>
+                <div class="column">
+                    <img id="img5" class="demo cursor" src="../images/catCuddle.jpg" alt="cats cuddling">
+                </div>
+                <div class="column">
+                    <img id="img6" class="demo cursor" src="../images/logo.jpeg" alt="K street cats">
+                </div>
+            </div>
+        </section>
         <footer>
             <img src="../images/logoGraphic.png" with="10px" alt="The K street cats logo">
             <div id = "links">
