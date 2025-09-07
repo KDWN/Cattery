@@ -2,10 +2,9 @@
     display: flex;
 }
 
-header {
+#leftSide {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 40%;
     background-color: rgb(255, 252, 248);
     padding-right: 3%;
@@ -15,20 +14,38 @@ header {
     margin: 1rem 0 1rem 7%;
 }
 
-header h1 {
+#leftSide h1 {
     font-size: 3rem;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 3rem auto;
 }
 
-header img {
-    width: 70%;
+#leftSection {
+    display: flex;
+    flex-direction: row;
+}
+
+#leftSection img {
+    width: 45%;
     height: auto;
     border-radius: 10px;
-    margin: 0 auto 0.5rem auto;
+    margin: 0 auto 0.5rem 1rem;
+}
+
+#requirements {
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#requirements p {
+    font-size: 1.1rem;
+    margin: auto 0 auto 0;
 }
 
 form {
     width: 60%;
+    height: 75vh;
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(255, 252, 248);
@@ -57,6 +74,10 @@ input {
     border-radius: 3px;
     width: 100%;
     border: 2px solid rgb(147, 147, 147);
+}
+
+input::placeholder {
+    font-size: 1rem;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

@@ -40,9 +40,11 @@ img {
     margin: 2px auto 2px auto;
     transition: transform 0.5s ease-in-out;
     width: 5vw;
-    height: 12px;
+    height: 0.6vw;
     max-width: 100px;
-    min-width: 20px;
+    max-height: 12px;
+    min-width: 40px;
+    min-height: 5px;
 }
 
 .navContent {

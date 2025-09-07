@@ -33,38 +33,48 @@
             </section>
         </nav>
         <div id = bookingBox>
-            <header>
+            <section id="leftSide">
                 <h1>BOOK YOUR CAT IN </h1>
-                <img src="../images/catTower.jpeg">
-            </header>
-            <form>
+                <div id="leftSection">
+                    <img src="../images/catTower.jpeg">
+                    <div id = "requirements">
+                        <p>We only accept vaccinated cats.</p>
+                        <p>We will respond within 1-3 business days confirming whether we can accept your booking.</p>
+                        <p>Cancellation 48hrs or more before check in date does not incur any fee. Cancellation later than this, but before the day of expected check-in will incur an administration fee equivalent to 1 day stay. Cancellation after the expected check-in will incur full fees.</p>
+                    </div>
+                </div>
+            </section>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="6603c8bd-b07f-4fb6-9c9c-03c1e9c55146">
+
                 <section id="personInfo">
                     <div>
                         <label for="name">Your name:</label>
-                        <input type="text" name="name" placeholder="Your full name">
+                        <input type="text" name="name" placeholder="Your full name" required>
                     </div>
                     <div>
                         <label for="phoneNum">Phone number:</label>
-                        <input type="number" name="phomeNum" placeholder="Your phone number">
+                        <input type="number" name="phoneNum" placeholder="Your phone number" required>
                     </div>
                     <div>
                         <label for="email">Email address:</label>
-                        <input type="email" id ="email" name="email" placeholder="Your email adress">
+                        <input type="email" id ="email" name="email" placeholder="Your email adress" required>
                     </div>
                 </section>
                 <section id="catInfo">
                     <div>
                         <label for="catCount">Number of cats</label>
-                        <input type="number" maxlength="2" name="catCount" placeholder="How may cats do you want to book">
+                        <input type="number" maxlength="2" name="catCount" placeholder="How may cats do you want to book" required>
                     </div>
                     <div id="duration">
                         <div>
                             <label for="startDate">Check-in date</label>
-                            <input type="date" id="startDate" name="startDate">
+                            <input type="date" id="startDate" name="startDate" required>
                         </div>
                         <div>
                             <label for="endDate">Check-out date</label>
-                            <input type="date" id="endDate" name="endDate">
+                            <input type="date" id="endDate" name="endDate" required>
                         </div>
                     </div>
                 </section>
