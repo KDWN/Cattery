@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head lang="en-GB">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>K Street Booking</title>
+        <meta name="description" content="Page for booking a stay at K Street Cats">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./booking.css"> <!--Links the css for this specific page-->
+        <link rel="stylesheet" href="../style.css"> <!--Links the global stylesheet for the navigation, footer, and constant css-->
+
+        <!--Imports the google fonts of comic relief-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Delius&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+        
+        <script type="module" src="../global.js"></script> <!--Links the global javascript for the navigation to function-->
+        <script type="module" src="./booking.js"></script> <!--Links the js for this specific page21-->
+    </head>
+    <body>
+        <!--Navigation section-->
+        <nav id = "topNav">
+            <!--The hamburger menu icon-->
+            <div id = "hamBtn">
+                <img class = "hamIcon" id = "ham0" src = "../images/hamburger4.png" width = "100" alt="Button that opens the navigation">
+                <img class = "hamIcon" id = "ham1" src = "../images/hamburger4.png" width = "100" alt="Button that opens the navigation">
+                <img class = "hamIcon" id = "ham2" src = "../images/hamburger4.png" width = "100" alt="Button that opens the navigation">
+            </div>
+
+            <!--The content displayed when the menu icon is clicked-->
+            <section class = "navContent">
+                <a href = "../home" class = "navText link0">Home</a>
+                <a href = "../booking" class = "navText link1" id = "active">Booking</a>
+                <a href = "../gallery" class = "navText link2">Gallery</a>
+                <a href = "../terms" class = "navText link3">T's & C's</a>
+            </section>
+        </nav>
+
+        <!--Contains all the page specific content-->
+        <div id = "bookingContainer">
+            <header class="smallOnly" id="miniHeader">
+                <h1>BOOK YOUR CAT IN</h1>
+            </header>
+            <div id = "bookingBox">
+                <section id="leftSide">
+                    <h1 class="largeOnly">BOOK YOUR CAT IN </h1>
+                    <img src="../images/catStackCut.jpeg" class="largeOnly" alt="Cat sitting on other cat">
+                    <div id = "requirements">
+                        <p>We only accept vaccinated cats.</p>
+                        <p class="largeOnly">We will respond within 1-3 business days confirming whether we can accept your booking.</p>
+                        <p class="largeOnly">Cancellation 48hrs or more before check in date does not incur any fee. Cancellation later than this, but before the day of expected check-in will incur an administration fee equivalent to 1 day stay. Cancellation after the expected check-in will incur full fees.</p>
+                        <a href="../terms/terms.html">Terms & Conditions</a>
+                    </div>
+                </section>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!--Email code from Web3Forms-->
+                    <!--<input type="hidden" name="access_key" value="6603c8bd-b07f-4fb6-9c9c-03c1e9c55146">-->
+                    <input type="hidden" name="access_key" value="cd8d5c97-8bc8-44aa-a6cb-b40b116b19df">
+
+                    <!--For email type clarification-->
+                    <input type="hidden" name="This is a booking">
+
+                    <!--Try and keep personInfo and catInfo vaugely balanced-->
+
+                    <!--Put any questions about the users info here (it doesn't matter what goes here this is just the left section of the form)-->
+                    <div id="personInfo">
+                        <div>
+                            <label for="name" class="largeOnly">Your name:</label>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </div>
+                        <div>
+                            <label for="phoneNum" class="largeOnly">Phone number:</label>
+                            <input type="number" name="phoneNum" placeholder="Your phone number" required>
+                        </div>
+                        <div>
+                            <label for="email" class="largeOnly">Email address:</label>
+                            <input type="email" id ="email" name="email" placeholder="Your email adress" required>
+                        </div>
+                    </div>
+                    <!--Put any questions you want about the cats here (it doesn't matter what goes here this is just the right section of the form)-->
+                    <div id="catInfo">
+                        <div>
+                            <label for="catCount" class="largeOnly">Number of cats</label>
+                            <input type="number" maxlength="2" name="catCount" placeholder="How may cats do you want to book" required>
+                        </div>
+                        <div id="duration">
+                            <div>
+                                <label for="startDate">Check-in date</label>
+                                <input type="date" id="startDate" name="startDate" required>
+                            </div>
+                            <div>
+                                <label for="endDate">Check-out date</label>
+                                <input type="date" id="endDate" name="endDate" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Description for users to give more information-->
+                    <textarea id="description" name="description" rows="10" cols="100" maxlength="1000" placeholder="Describe extra information about your cats here..."></textarea>
+                    <div id="complete">
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Footer containing links and the logo (need to add copyright info and faebook page)-->
+        <footer>
+            <img src="../images/logoGraphic.png" alt="The K street cats logo">
+            <div id = "links">
+                <a href="../home">Home</a>
+                <a href="../booking">Booking</a>
+                <a href="../gallery">Gallery</a>
+                <a href="../terms">T's & C's</a>
+            </div>
+        </footer>
+    </body>
+</html>

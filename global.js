@@ -3,12 +3,14 @@ function hamClick(menu) {
     let icon0 = menu.childNodes[1];
     let icon1 = menu.childNodes[3];
     let icon2 = menu.childNodes[5];
+    // Resets the navigation if it's open
     if (nav.classList.contains("open")){
         icon1.style.transform = '';
         icon0.style.transform = '';
         icon2.style.transform = '';
         nav.classList.remove("open");
     }
+    // Pushes the navigation content out if closed
     else {
         icon1.style.transform = 'translate(-120px) scale(0.9)';
         icon0.style.transform = 'translate(0, 127.5%) rotate(45deg) scale(0.8)';
@@ -18,11 +20,11 @@ function hamClick(menu) {
 }
 
 
-
+// Checks if page is loaded
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Page Loaded");
+    // Opens the navbar when it is clicked
     document.querySelector("#hamBtn").addEventListener( "click", function() {
-        console.log("clicked")
         hamClick(this);
     });
 });

@@ -2,12 +2,14 @@
     box-sizing: border-box;
 }
 
+/* sets up the box for the image gallery */
 #container {
     position: relative;
     width: 80%;
     margin: 0 auto 0 auto;
 }
 
+/* sets up to give a nice effect for when the image size ratio doesn't match the gallery size ratio */
 .blur {
     display: flex;
     width: 100%;
@@ -15,14 +17,16 @@
     justify-content: center;
 }
 
+/* sets up the images so that they display properly */
 .mySlides {
     display: none;
 }
 
 .mySlides img {
-    max-height: 80vh;
+    height: 80vh;
 }
 
+/* sets up the number in top middle */
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -32,6 +36,7 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* gives the slides images to display */
 #slide1 {
     background-image: url(../images/barn.jpeg);
     backdrop-filter: blur(1rem);
@@ -57,10 +62,12 @@
     backdrop-filter: blur(1rem);
 }
 
+/* sets up cursor based hover effects */
 .cursor {
     cursor: pointer;
 }
 
+/* sets up the navigation buttons */
 #prev,
 #next {
     cursor: pointer;
@@ -88,6 +95,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* sets up the text section below the images */
 .caption-container {
     text-align: center;
     background-color: #222;
@@ -95,6 +103,7 @@
     color: white;
 }
 
+/* sets up the preview images */
 .row {
     display: flex;
     justify-content: center;
@@ -119,4 +128,35 @@
 .active,
 .demo:hover {
     opacity: 1;
+}
+
+/* changes the prior values to fit within a thinner aspect ratio */
+@media only screen and (max-width: 1000px) {
+    #container {
+        width: 100%;
+    }
+    .mySlides {
+        flex-direction: column;
+        height: 60vh;
+    }
+    .blur {
+        height: 100%;
+        justify-content: center;
+    }
+    .blur img {
+        width: 100%;
+        height: auto;
+        margin: auto 0 auto 0;
+    }
+    .row img {
+        height: 100%;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+    .mySlides .tall {
+        height: 60vh;
+        width: auto;
+    }
 }

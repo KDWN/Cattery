@@ -1,34 +1,42 @@
-#bookingBox {
-    display: flex;
+/* Hides content that only exists within a thinner aspect ratio */
+.smallOnly {
+    display: none;
 }
 
-#leftSide {
+/* sets up the area for the booking form */
+#bookingContainer {
     display: flex;
     flex-direction: column;
-    width: 40%;
     background-color: rgb(255, 252, 248);
-    padding-right: 3%;
     border: 2px solid rgb(183, 181, 177);
-    border-right: none;
-    border-radius: 20px 0 0 20px;
-    margin: 1rem 0 1rem 7%;
+    margin: 1rem 3% 1rem 7%;
+    border-radius: 20px 20px 20px 20px;
 }
 
-#leftSide h1 {
-    font-size: 3rem;
-    margin: 0 auto 3rem auto;
-}
-
-#leftSection {
+#bookingBox {
     display: flex;
     flex-direction: row;
 }
 
-#leftSection img {
-    width: 45%;
+/* sets up the section containing relevant information */
+#leftSide {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-right: 3%;
+    border-right: none;
+}
+
+#leftSide h1 {
+    font-size: 3rem;
+    margin: 0.2rem auto 2rem auto;
+}
+
+#leftSide img {
+    width: 80%;
     height: auto;
     border-radius: 10px;
-    margin: 0 auto 0.5rem 1rem;
+    margin: 0 auto 0 auto;
 }
 
 #requirements {
@@ -40,34 +48,34 @@
 
 #requirements p {
     font-size: 1.1rem;
-    margin: auto 0 auto 0;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
+/* sets up the form */
 form {
     width: 60%;
     height: 75vh;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(255, 252, 248);
-    border: 2px solid rgb(183, 181, 177);
     border-left: none;
-    border-radius: 0 20px 20px 0;
-    padding-left: 0%;
     padding-right: 0.5rem;
-    margin: 1rem 2rem 1rem 0;
+    margin: 2rem 2rem 1rem 0;
 }
 
-form section {
-    margin: 1rem auto 0 auto;
+#personInfo,
+#catInfo {
+    margin: 0 auto 0 auto;
 }
 
-form div {
+#personInfo div,
+#catInfo div {
     display: flex;
     flex-direction: column;
     margin: 0.5rem 0 0 0;
     font-size: 0.75rem;
 }
 
+/* sets up the inputs within the form */
 input {
     font-size: 1.5rem;
     padding: 0.4rem 0.6rem 0.4rem 0.6rem;
@@ -78,6 +86,7 @@ input {
 
 input::placeholder {
     font-size: 1rem;
+    font-family: "Comic Relief", "system-ui";
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -90,20 +99,19 @@ input[type="number"] {
 }
 
 #catInfo {
-    width: 50%;
     margin-top: 3rem;
 }
 
-#duration {
-    display:flex;
+#catInfo #duration {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
-    width: 85%;
+    width: 100%;
 }
 
 #duration input {
     font-size: 1rem;
+    padding: 0.4rem 0.2rem 0.4rem 0.2rem;
     margin: 0;
 }
 
@@ -116,11 +124,74 @@ textarea {
     margin: 0 0 0 1rem;
 }
 
-input[type="submit"] {
+button {
+    font-family: "dynapuff", sans-serif;
+    font-size: 2rem;
     border-radius: 50px;
 }
 
-input[type="submit"]:hover {
+button:hover {
     cursor: pointer;
     background-color: rgb(255, 252, 248);
+}
+
+/* changes the prior values to fit within a thinner aspect ratio */
+@media only screen and (max-width: 800px) {
+    .smallOnly {
+        display: block;
+    }
+    .largeOnly {
+        display: none;
+    }
+    #miniHeader {
+        width: 90%;
+        margin: auto;
+    }
+    #miniHeader h1 {
+        text-align: center;
+    }
+    #bookingContainer {
+        width: 90%;
+        margin: 1rem auto 1rem auto;
+    }
+    #bookingBox {
+        flex-direction: column-reverse;
+    }
+    #bookingBox * {
+        margin: 0 auto 0 auto;
+    }
+    #leftSide {
+        width: 80%;
+    }
+    #requirements {
+        flex-direction: row;
+        width: 100%;
+    }
+    #requirements * {
+        margin: auto;
+    }
+    form {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: fit-content;
+        width: 90%;
+        padding: 0;
+    }
+    input {
+        margin: auto;
+        border-radius: 50px;
+        width: 80%;
+    }
+    #catInfo #duration {
+        width: 80%;
+        margin: 0.5rem auto 0 auto;
+    }
+    #description {
+        width: 90%;
+        border-radius: 50px;
+        margin: 1rem auto 1rem auto;
+    }
+    footer {
+        width: 50%;
+    }
 }

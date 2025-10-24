@@ -1,7 +1,9 @@
+/* aligns header to centre */
 header {
     text-align: center;
 }
 
+/* sets up for every section */
 .terms {
     width: 70%;
     padding: 0.5rem 2rem 0.5rem 2rem;
@@ -11,10 +13,11 @@ header {
     margin: 1rem auto 1rem auto;
 }
 
+/* sets up the content */
 ul {
-    list-style: none;
     margin-left: -2rem;
     font-family: "Comic Relief", system-ui;
+    font-weight: 400;
 }
 
 .line {
@@ -26,6 +29,7 @@ ul {
     display: none;
 }
 
+/* sets up the top part of each section */
 .terms div {
     display: flex;
     justify-content: space-between;
@@ -39,6 +43,7 @@ ul {
     cursor: pointer;
 }
 
+/* sets up the plus/minus icon */
 .terms div img {
     width: 16px;
     height: 4px;
@@ -54,4 +59,11 @@ ul {
 strong {
     font-weight: bold;
     font-size: 1.3rem;
+}
+
+/* changes the prior values to fit within a thinner aspect ratio */
+@media only screen and (max-width: 600px) {
+    .collapse h1 {
+        font-size: 1.8rem;
+    }
 }

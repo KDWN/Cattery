@@ -1,16 +1,19 @@
+/*Put variables here*/
 :root {
     --altBack: rgb(197, 235, 235);
 }
 
+/* A general outline for how headers should be */
 section h1 {
     font-size: 2rem;
     text-align: center;
     margin: auto;
 }
 
+/* For setting the background image at the top */
 #banner {
-    width: auto;
     height: 100vh;
+    background-color: rgb(226,224,216);
     background-image: url("../images/sneakyCatCut.jpeg");
     background-position: center;
     background-size: cover;
@@ -24,15 +27,18 @@ section h1 {
     margin: auto auto auto 70%;
 }
 
+/* Creates the colour changing effect from the banner to the services */
 #topInfo {
     background-image: linear-gradient(rgb(226,224,216), var(--altBack));
     padding: 7.5rem 0 7.5rem 0;
+    margin-bottom: -2px
 }
 
+/* For setting the full area of the description (TEXT NEEDS REFORMATTING IF CHANGED TO MUCH! it is setup to look good with that image) */
 #aboutBox {
     width: 60%;
     height: 75vh;
-    background-image:url(../images/catPaddockCut2.jpeg);
+    background-image:url("../images/catPaddockCut.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -44,6 +50,7 @@ section h1 {
     margin: 0 auto 0 auto;
 }
 
+/* Places the slightly over the blurb */
 #aboutBox header {
     width: 30rem;
     margin: 7vh 0 0 10vw;
@@ -62,15 +69,11 @@ section h1 {
 #aboutBox p {
     text-align: end;
     font-size: 1.48rem;
-    font-family: "dynapuff", sans-serif;
+    font-family: "dynapuff", system-ui;
+    font-weight: 500;
 }
 
-#services {
-    display: inline-block;
-    justify-content: space-evenly;
-    height: 500px;
-}
-
+/* Needed to make the colour fade effect look good */
 #services header {
     width: 100%;
     background-image: linear-gradient(var(--altBack), var(--altBack), var(--altBack), var(--altBack), white);
@@ -82,15 +85,17 @@ section h1 {
 
 #services header h1 {
     font-size: 4rem;
+    font-weight: 600;
 }
 
 .service {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    margin: 10vh 0px 10vh 0px;
+    margin: 10vh 0 10vh 0;
 }
 
+/* Reverses the direction for the middle section to make html simple */
 .rightshift {
     display: flex;
     flex-direction: row-reverse;
@@ -113,13 +118,18 @@ section h1 {
 
 .serviceText p {
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 500;
 }
 
 #contactBorder {
-    margin: 2rem 0px 2rem 0px;
+    margin: 2rem 0 2rem 0;
 }
 
+#contactBorder h1 {
+    font-size: 3rem;
+}
+
+/* Creates the box that the contact inputs are in */
 #contactBox {
     margin: 2rem auto 2rem auto;
     width: 50%;
@@ -129,7 +139,7 @@ section h1 {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 1rem 0px 1rem 0px;
+    padding: 1rem 0 1rem 0;
 }
 
 .contacts {
@@ -140,15 +150,117 @@ section h1 {
 }
 
 .contacts h3{
-    margin: 0px 0px 0px 2%;
+    margin: 0 0 0 2%;
     font-size: 0.9rem;
     font-weight:normal;    
 }
 
-.contactInfo {
+input,
+textarea {
+    font-size: 1rem;
+    font-family: "Comic Relief", "system-ui";
     background-color: rgb(255, 252, 248);
-    text-align: center;
-    padding: 0.2rem;
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
     border: 2px solid rgb(183, 181, 177);
     border-radius: 10px;
+}
+
+::placeholder {
+    font-size: 1rem;
+    font-family: "Comic Relief", "system-ui";
+}
+
+/* removes the increase/decrease arrows from the number input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    width: 10rem;
+    height: 3rem;
+    font-family: "Dynapuff", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    background-color: rgb(255, 232, 250);
+    border-radius: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(218, 245, 255);
+}
+
+/* Changes the about section so that the text doesn't overlap or go off when screen is thinner than 1014px */
+@media only screen and (max-width: 1014px) {
+    #aboutBox {
+        flex-direction: column;
+    }
+    #aboutBox header {
+        margin: 0;
+        transform: none;
+        width: 100%;
+    }
+    #aboutBox h1 {
+        margin: 0;
+    }
+    #aboutBox div {
+        width: 100%;
+        margin: 0;
+    }
+    #aboutBox p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/* changes the prior values to fit within a thinner aspect ratio */
+@media only screen and (max-width: 800px) {
+    /* Replaces the banner with the logo to look better */
+    #banner {
+        background-image: url("../images/logoGraphic.png");
+        background-size: contain;
+        background-position: top;
+        height: 50vh;
+    }
+    #banner img {
+        display: none;
+    }
+    #aboutBox {
+        width: 75%;
+    }
+    #services header h1 {
+        font-size: 2.5rem;
+    }
+    .service {
+        flex-direction: column;
+    }
+    .serviceText {
+        width: 70%;
+        margin: auto;
+    }
+    .serviceText h1 {
+        font-size: 2rem;
+    }
+    .serviceText p {
+        font-size: 1rem;
+    }
+    .service img {
+        margin: auto;
+        width: 75%;
+    }
+    #contactBorder h1 {
+        font-size: 2.5rem;
+    }
+    #contactBox {
+        width: 75%;
+    }
 }
