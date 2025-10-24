@@ -6,18 +6,20 @@ function checkdate() {
     // getting all relevant dates
     let startDate = new Date(start.value);
     let endDate = new Date(end.value);
-    let currentDate = new Date
+    endDate.setHours(0, 0, 0, 0);
+    let currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
 
     // checks if they have a start date before checking if they have given enough warning
     if (start.value != ""){
-        if(startDate <= currentDate){
+        if(startDate.getDate() <= currentDate.getDate()+1){
             start.value = "";
-            alert("We need at least 1 days warning");
+            alert("We need at least 2 days warning");
         }
     }
     // checks if both dates have been input before checking if they have tried to apply for their cat(s) to stay a negative amount of time
     if (end.value != "" && start.value != ""){
-        if(end.value < start.value) {
+        if(endDate.getDate() <= startDate.getDate()) {
             end.value = "";
             alert("End date must be after start date")
         }
