@@ -12,16 +12,24 @@ function checkdate() {
 
     // checks if they have a start date before checking if they have given enough warning
     if (start.value != ""){
-        if(startDate.getDate() <= currentDate.getDate()+1){
-            start.value = "";
-            alert("We need at least 2 days warning");
+        if(startDate.getFullYear() > currentDate.getFullYear()) {} else {
+            if(startDate.getMonth() > currentDate.getMonth()) {} else {
+                if(startDate.getDate() <= currentDate.getDate()+1){
+                    start.value = "";
+                    alert("We need at least 2 days warning");
+                }
+            }
         }
     }
     // checks if both dates have been input before checking if they have tried to apply for their cat(s) to stay a negative amount of time
     if (end.value != "" && start.value != ""){
-        if(endDate.getDate() <= startDate.getDate()) {
-            end.value = "";
-            alert("End date must be after start date")
+        if(endDate.getFullYear() > startDate.getFullYear()) {} else {
+            if(endDate.getMonth() > startDate.getMonth()) {} else {
+                if(endDate.getDate() <= startDate.getDate()) {
+                    end.value = "";
+                    alert("End date must be after start date")
+                }
+            }
         }
     }
 }
