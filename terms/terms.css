@@ -63,7 +63,7 @@ strong {
 
 /* changes the prior values to fit within a thinner aspect ratio */
 @media only screen and (max-width: 600px) {
-    .collapse h1 {
+    .collapse h2 {
         font-size: 1.8rem;
     }
 }

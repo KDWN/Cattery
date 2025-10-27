@@ -3,8 +3,8 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html>
-    <head lang="en-GB">
+<html lang="en-GB">
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>K Street Booking</title>
@@ -33,12 +33,12 @@
             </div>
 
             <!--The content displayed when the menu icon is clicked-->
-            <section class = "navContent">
+            <div class = "navContent">
                 <a href = "../home" class = "navText link0">Home</a>
                 <a href = "../booking" class = "navText link1" id = "active">Booking</a>
                 <a href = "../gallery" class = "navText link2">Gallery</a>
                 <a href = "../terms" class = "navText link3">T's & C's</a>
-            </section>
+            </div>
         </nav>
 
         <!--Contains all the page specific content-->
@@ -54,7 +54,7 @@
                         <p>We only accept vaccinated cats.</p>
                         <p class="largeOnly">We will respond within 1-3 business days confirming whether we can accept your booking.</p>
                         <p class="largeOnly">Cancellation 48hrs or more before check in date does not incur any fee. Cancellation later than this, but before the day of expected check-in will incur an administration fee equivalent to 1 day stay. Cancellation after the expected check-in will incur full fees.</p>
-                        <a href="../terms/terms.html">Terms & Conditions</a>
+                        <a href="../terms">Terms & Conditions</a>
                     </div>
                 </section>
                 <form action="https://api.web3forms.com/submit" method="POST">
@@ -71,11 +71,11 @@
                     <div id="personInfo">
                         <div>
                             <label for="name" class="largeOnly">Your name:</label>
-                            <input type="text" name="name" placeholder="Your name" required>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
                         </div>
                         <div>
                             <label for="phoneNum" class="largeOnly">Phone number:</label>
-                            <input type="number" name="phoneNum" placeholder="Your phone number" required>
+                            <input type="number" id="phoneNum" name="phoneNum" placeholder="Your phone number" required>
                         </div>
                         <div>
                             <label for="email" class="largeOnly">Email address:</label>
@@ -86,7 +86,7 @@
                     <div id="catInfo">
                         <div>
                             <label for="catCount" class="largeOnly">Number of cats</label>
-                            <input type="number" maxlength="2" name="catCount" placeholder="How may cats do you want to book" required>
+                            <input type="number" id="catCount" name="catCount" placeholder="How may cats do you want to book" required>
                         </div>
                         <div id="duration">
                             <div>
