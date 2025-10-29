@@ -14,11 +14,13 @@
         <link rel="stylesheet" href="./booking.css"> <!--Links the css for this specific page-->
         <link rel="stylesheet" href="../style.css"> <!--Links the global stylesheet for the navigation, footer, and constant css-->
 
-        <!--Imports the google fonts of comic relief-->
+        <!--Imports the google fonts of comic relief and Dynapuff-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Delius&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
         
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
         <script type="module" src="../global.js"></script> <!--Links the global javascript for the navigation to function-->
         <script type="module" src="./booking.js"></script> <!--Links the js for this specific page21-->
     </head>
@@ -57,11 +59,7 @@
                         <a href="../terms">Terms & Conditions</a>
                     </div>
                 </section>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <!--Email code from Web3Forms-->
-                    <!--<input type="hidden" name="access_key" value="6603c8bd-b07f-4fb6-9c9c-03c1e9c55146">-->
-                    <input type="hidden" name="access_key" value="cd8d5c97-8bc8-44aa-a6cb-b40b116b19df">
-
+                <form action="https://formsubmit.co/keiran.downsgts@gmail.com" method="POST">
                     <!--For email type clarification-->
                     <input type="hidden" name="This is a booking">
 
@@ -104,12 +102,13 @@
                     <div id="complete">
                         <button type="submit" id="submit">Submit</button>
                     </div>
+                    <!-- <div class="g-recaptcha" data-sitekey="6LcaVPkrAAAAANA840ElanAbhCAcnFnYGFNK5u4z"></div> -->
                 </form>
             </div>
         </div>
         <!--Footer containing links and the logo (need to add copyright info and faebook page)-->
         <footer>
-            <img src="../images/logoGraphic.png" alt="The K street cats logo">
+            <a href="../home/"><img src="../images/logoGraphic.png" alt="The K street cats logo"></a>
             <div id = "links">
                 <a href="../home">Home</a>
                 <a href="../booking">Booking</a>
