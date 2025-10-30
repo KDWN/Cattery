@@ -42,24 +42,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#endDate").addEventListener("change", () => {
         checkdate()
     });
-    // document.querySelector("form").addEventListener("submit", (input) => {
-    //     input.preventDefault();
-
-    //     let captchaResponse = grecaptcha.getResponse();
-
-    //     if (!captchaResponse > 0){
-    //         throw new Error("captcha not complete");
-    //     }
-
-    //     let bookingData = new FormData(input.target);
-    //     let params = new URLSearchParams(bookingData);
-
-    //     fetch("https://formsubmit.co/your@email.com", {
-    //         method: "POST",
-    //         body: params,
-    //     })
-    //     .then(res => res.json())
-    //     .then(data => console.log(data))
-    //     .catch(err => console.error(err))
-    // });
 });
