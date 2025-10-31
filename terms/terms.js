@@ -18,10 +18,8 @@ function collapse(button) {
 }
 
 // once the pages is loaded, adds checks for user input to run the function above
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".collapse").forEach(button => {
-        button.addEventListener("click", function() {
-            collapse(this);
-        });        
+$(document).ready(function() {
+    $(".collapse").on("click", function() {
+        collapse(this);
     });
 });

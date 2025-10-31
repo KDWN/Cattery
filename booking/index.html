@@ -8,6 +8,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>K Street Booking</title>
+
+        <!-- Imports the JQuery library -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+        
         <meta name="description" content="Page for booking a stay at K Street Cats">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -59,11 +65,11 @@
                         <a href="../terms">Terms & Conditions</a>
                     </div>
                 </section>
-                <form action="https://api.web3forms.com/submit" method="POST">
+                <form id="registerForm" class="validate" action="https://api.web3forms.com/submit" method="POST">
                     <!--Email code from Web3Forms-->
                     <!--<input type="hidden" name="access_key" value="6603c8bd-b07f-4fb6-9c9c-03c1e9c55146">-->
                     <input type="hidden" name="access_key" value="cd8d5c97-8bc8-44aa-a6cb-b40b116b19df">
-                    
+
                     <!--For email type clarification-->
                     <input type="hidden" name="This is a booking">
 
@@ -81,14 +87,14 @@
                         </div>
                         <div>
                             <label for="email" class="largeOnly">Email address:</label>
-                            <input type="email" id ="email" name="email" placeholder="Your email adress" required>
+                            <input id ="email" name="email" placeholder="Your email adress">                            
                         </div>
                     </div>
                     <!--Put any questions you want about the cats here (it doesn't matter what goes here this is just the right section of the form)-->
                     <div id="catInfo">
                         <div>
                             <label for="catCount" class="largeOnly">Number of cats</label>
-                            <input type="number" id="catCount" name="catCount" placeholder="How may cats do you want to book" required>
+                            <input class="form-control num before 100" id="catCount" name="catCount" placeholder="How may cats do you want to book" required>
                         </div>
                         <div id="duration">
                             <div>
@@ -102,9 +108,9 @@
                         </div>
                     </div>
                     <!--Description for users to give more information-->
-                    <textarea id="description" name="description" rows="10" cols="100" maxlength="1000" placeholder="Describe extra information about your cats here..."></textarea>
+                    <textarea id="description" name="description" rows="10" cols="100" maxlength="1000" placeholder="Describe extra information about your cats such as special food and health requirements"></textarea>
                     <div id="complete">
-                        <button type="submit" id="submit">Submit</button>
+                        <button type="submit" id="submit" class="btn btn-success">Submit</button>
                     </div>
                     <!-- <div class="g-recaptcha" data-sitekey="6LcaVPkrAAAAANA840ElanAbhCAcnFnYGFNK5u4z"></div> -->
                 </form>

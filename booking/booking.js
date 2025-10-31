@@ -19,6 +19,14 @@ function checkdate() {
                     alert("We need at least 2 days warning");
                 }
             }
+            if(currentDate.getMonth() < startDate.getMonth()) {
+                start.value = "";
+                alert("End date must be after start date")
+            }
+        }
+        if(currentDate.getFullYear() < startDate.getFullYear()) {
+            start.value = "";
+            alert("End date must be after start date")
         }
     }
     // checks if both dates have been input before checking if they have tried to apply for their cat(s) to stay a negative amount of time
@@ -30,16 +38,24 @@ function checkdate() {
                     alert("End date must be after start date")
                 }
             }
+            if(endDate.getMonth() < startDate.getMonth()) {
+                end.value = "";
+                alert("End date must be after start date")
+            }
+        }
+        if(endDate.getFullYear() < startDate.getFullYear()) {
+            end.value = "";
+            alert("End date must be after start date")
         }
     }
 }
 
 //once the page is loaded, adds checks for when the user changes the dates to run the function above
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#startDate").addEventListener("change", () => {
+$(document).ready( () => {
+    $("#startDate").on("change", () => {
         checkdate()
     });
-    document.querySelector("#endDate").addEventListener("change", () => {
+    $("#endDate").on("change", () => {
         checkdate()
     });
 });

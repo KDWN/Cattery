@@ -21,10 +21,10 @@ function hamClick(menu) {
 
 
 // Checks if page is loaded
-document.addEventListener("DOMContentLoaded", () => {
+$(document).ready( () => {
     console.log("Page Loaded");
     // Opens the navbar when it is clicked
-    document.querySelector("#hamBtn").addEventListener( "click", function() {
+    $("#hamBtn").on( "click", function() {
         hamClick(this);
     });
 });

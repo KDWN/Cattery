@@ -49,21 +49,21 @@ function showSlides(n) {
 }
 
 // once the pages is loaded, adds checks for user input to run the functions above
-document.addEventListener("DOMContentLoaded", () => {
+$(document).ready( () => {
     // sets up taller images so they can be altered for thinner aspect ratios
     document.querySelectorAll(".blur > img").forEach(slide => {
         if (slide.height > vh(60)) {
             slide.className = "tall"
         }
     });
-    document.getElementById("prev").addEventListener("click", () => {
+    $("#prev").on("click", () => {
         plusSlides(-1);
     });
-    document.getElementById("next").addEventListener("click", () => {
+    $("#next").on("click", () => {
         plusSlides(1);
     });
-    document.querySelectorAll(".demo").forEach((selector, index) => {
-        selector.addEventListener("click", () => {
+    $(".demo").each(function(index, selector) {
+        $(selector).on("click", function() {
             currentSlide(index+1);
         });
     });
